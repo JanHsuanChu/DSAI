@@ -1,20 +1,21 @@
-# <span style="color:#2563eb">📄 README Style Rule — User Guide</span>
+<h1 style="color:#2563eb">📄 README Style Rule — User Guide</h1>
 
 > What the readme-style rule does and how to use it when writing or editing READMEs.
 
 ---
 
-## <span style="color:#2563eb">📑 Table of Contents</span>
+<h2 style="color:#2563eb">📑 Table of Contents</h2>
 
 - [What this rule does](#-what-this-rule-does)
 - [When it applies](#-when-it-applies)
 - [What you need to do](#-what-you-need-to-do)
 - [How the rule is used](#-how-the-rule-is-used)
+- [How this fits in Cursor](#-how-this-fits-in-cursor)
 - [Related files](#-related-files)
 
 ---
 
-## <span style="color:#2563eb">📋 What this rule does</span>
+<h2 style="color:#2563eb">📋 What this rule does</h2>
 
 The **readme-style** rule tells the AI how to format user-facing READMEs in this project. It keeps docs short, easy to scan, and consistent.
 
@@ -24,7 +25,7 @@ It covers length, audience, structure (TOC, headers, links), diagrams, and a sho
 
 ---
 
-## <span style="color:#2563eb">🎯 When it applies</span>
+<h2 style="color:#2563eb">🎯 When it applies</h2>
 
 The rule runs when you create or edit files that match **`**/README*.md`** (e.g. `README.md`, `README_my_good_query_user.md`). It does not run for other markdown files unless you mention the rule or the README.
 
@@ -32,7 +33,7 @@ Use it whenever you want a README that is aimed at **people reading the output o
 
 ---
 
-## <span style="color:#2563eb">✅ What you need to do</span>
+<h2 style="color:#2563eb">✅ What you need to do</h2>
 
 When writing a user-facing README, the rule asks for:
 
@@ -49,7 +50,7 @@ The full checklist and theme snippet are in [readme-style.mdc](readme-style.mdc)
 
 ---
 
-## <span style="color:#2563eb">🔄 How the rule is used</span>
+<h2 style="color:#2563eb">🔄 How the rule is used</h2>
 
 When you edit a README that matches the rule, the AI uses this flow to apply the style:
 
@@ -67,7 +68,13 @@ You don’t have to remember every detail; referring to “readme-style” or th
 
 ---
 
-## <span style="color:#2563eb">🔗 Related files</span>
+<h2 style="color:#2563eb">⚙️ How this fits in Cursor</h2>
+
+Cursor **rules** are extra instructions the AI receives so it can match your project’s style and conventions. They live in `.cursor/rules/` as `.mdc` files. Each rule can have a **description** (what it does), **globs** (which files trigger it—e.g. `**/README*.md`), and **alwaysApply** (whether it runs in every chat or only when relevant files are open). The readme-style rule is file-based: Cursor includes it when you work on a README that matches the glob, so the AI automatically has the formatting requirements in context without you pasting them in.
+
+---
+
+<h2 style="color:#2563eb">🔗 Related files</h2>
 
 | File | Purpose |
 |------|--------|
