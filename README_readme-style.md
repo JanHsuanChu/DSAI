@@ -4,8 +4,6 @@
 
 **Rule file:** [readme-style.mdc](readme-style.mdc)
 
-*On GitHub, section headers use the default (black) style; GitHub does not render inline HTML colors. The header color #DD4633 appears in Cursor, VS Code, and other editors that support it.*
-
 ---
 
 ## <span style="color:#DD4633">📑 Table of Contents</span>
@@ -48,8 +46,10 @@ flowchart LR
 | **Audience** | Readers of output or users of the tool; avoid developer-only jargon. |
 | **Table of contents** | At the top, with anchor links to each section. |
 | **Section headers** | One icon (emoji) per section (e.g. `## 📑 Table of Contents`). Use plain markdown so headers render on GitHub; in Cursor/VS Code you can use header color #DD4633: `## <span style="color:#DD4633">📑 Title</span>`. |
-| **Links** | Hyperlinks to relevant repo files (relative paths); include a “Related files” (or “See also”) section. |
+| **Links** | Hyperlinks to relevant repo files (relative paths); include a "Related files" (or "See also") section. |
 | **Diagrams** | If you use Mermaid flowcharts: one-screen fit (e.g. `flowchart LR`, fewer nodes) and brown theme via `themeVariables`. |
+
+*Section headers:* On GitHub, headers use the default (black) style; GitHub does not render inline HTML colors. The color #DD4633 appears in Cursor, VS Code, and other editors that support it.
 
 The full, authoritative list is in [readme-style.mdc](readme-style.mdc).
 
