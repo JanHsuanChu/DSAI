@@ -4,6 +4,8 @@
 
 **Rule file:** [readme-style.mdc](readme-style.mdc)
 
+*On GitHub, section headers use the default (black) style; GitHub does not render inline HTML colors. The header color #DD4633 appears in Cursor, VS Code, and other editors that support it.*
+
 ---
 
 ## <span style="color:#DD4633">📑 Table of Contents</span>
