@@ -14,6 +14,7 @@
 ## 0.1 Load Packages #################################
 
 library(httr2)
+library(jsonlite)
 library(dplyr)
 library(tibble)
 library(purrr)

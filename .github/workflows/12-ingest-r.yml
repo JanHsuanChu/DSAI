@@ -49,6 +49,7 @@ jobs:
       - name: SET USER LIBRARY PATH FOR CACHE
         run: echo "R_LIBS_USER=${HOME}/.cache/R/gha-library" >> $GITHUB_ENV
 
+      # httr2::resp_body_json() requires jsonlite (declared below + explicit install step).
       - name: CACHE PACKAGES
         uses: actions/cache@v4
         with:
@@ -71,8 +72,6 @@ jobs:
             any::DBI
             any::RSQLite
 
-      # httr2::resp_body_json() requires jsonlite; ensure it is on .libPaths()
-      # even when package caches restore an incomplete library tree.
       - name: ENSURE JSONLITE
         run: Rscript -e "install.packages('jsonlite', repos='https://cloud.r-project.org')"
 
