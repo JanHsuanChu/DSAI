@@ -26,7 +26,7 @@ jobs:
       - name: CHECK FILE SIZE LIMITS
         run: |
           set -euo pipefail
-          FILE="12_end/data/traffic.db"
+          FILE="dsai/12_end/data/traffic.db"
           MAX_MB=95
           if [ -f "$FILE" ]; then
             SIZE_BYTES=$(wc -c < "$FILE")
@@ -53,7 +53,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-lib-ingest-${{ hashFiles('.github/workflows/12-ingest-r.yml', '12_end/01_ingest_traffic.R') }}
+          key: ${{ runner.os }}-r-lib-ingest-${{ hashFiles('.github/workflows/12-ingest-r.yml', 'dsai/12_end/01_ingest_traffic.R') }}
           restore-keys: |
             ${{ runner.os }}-r-lib-ingest-
             ${{ runner.os }}-r-lib-
@@ -71,14 +71,14 @@ jobs:
             any::RSQLite
 
       - name: RUN INGESTION JOB
-        working-directory: 12_end
+        working-directory: dsai/12_end
         run: Rscript 01_ingest_traffic.R
 
       - name: COMMIT CHANGES
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add 12_end/data/traffic.db
+          git add dsai/12_end/data/traffic.db
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
