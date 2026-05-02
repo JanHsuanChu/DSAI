@@ -71,6 +71,11 @@ jobs:
             any::DBI
             any::RSQLite
 
+      # httr2::resp_body_json() requires jsonlite; ensure it is on .libPaths()
+      # even when package caches restore an incomplete library tree.
+      - name: ENSURE JSONLITE
+        run: Rscript -e "install.packages('jsonlite', repos='https://cloud.r-project.org')"
+
       - name: RUN INGESTION JOB
         working-directory: dsai/12_end
         run: Rscript 01_ingest_traffic.R
